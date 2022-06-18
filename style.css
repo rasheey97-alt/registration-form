@@ -1,0 +1,168 @@
+:root {
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  /* Accent */
+
+  --blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--red) url(./images/bg-intro-mobile.png);
+  color: var(--white);
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+  line-height: 1.5;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus,
+button:focus,
+input:focus {
+  outline: var(--black) 3px;
+  outline-offset: 0.05em;
+}
+
+/* button effect */
+.app__signature-button:active,
+input[type="submit"]:active {
+  box-shadow: 0px 0px;
+  transform: translateY(10px);
+}
+
+/* body layout */
+.app__container_general {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+}
+
+.app__intro,
+.app__register {
+  max-width: 500px;
+}
+
+.app__intro h1 {
+  font-size: 2em;
+  margin: 15px;
+}
+
+.app__intro p {
+  padding-bottom: 50px;
+  margin: 0 30px;
+}
+
+.app__signature-button {
+  background-color: var(--blue);
+  border: 0px;
+  padding: 20px 50px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 10px rgba(62, 60, 73, 0.3);
+  outline: none;
+  cursor: pointer;
+}
+
+.app__register {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 10px rgba(62, 60, 73, 0.3);
+}
+
+.app__register label {
+  color: var(--dark-blue);
+  margin-top: 15px;
+}
+
+.app__register p a{
+  color: var(--red);
+  font-weight: 500;
+}
+.app__register a{
+  color: var(--red);
+  font-weight: 500;
+}
+
+.app__submit_description{
+  color: var(--grayish-blue);
+}
+
+input {
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: 200;
+  border: 1px solid var(--grayish-blue);
+}
+
+input[type="submit"] {
+  background-color: var(--green);
+  border: 0px;
+  border-radius: 10px;
+  margin: 20px 0;
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0px 10px rgba(62, 60, 73, 0.3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus {
+  outline: 3px solid var(--dark-blue);
+}
+
+footer{
+  padding-bottom: 25px;
+}
+
+footer a{
+  color: hsl(228, 45%, 44%);
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        background: var(--red) url("./images/bg-intro-desktop.png");
+    }
+
+    .app__signature-button:hover {
+        background-color: #3116e0;
+    }
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="password"]:hover {
+        border: 3px solid var(--grayish-blue);
+    }
+
+    input[type="submit"]:hover {
+        background-color: #09f58f;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
